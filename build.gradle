@@ -1,0 +1,25 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'pl.com.britenet'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation group: 'org.springframework.statemachine', name: 'spring-statemachine-core', version: '2.1.3.RELEASE'
+	implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+
+}
+
+test {
+	useJUnitPlatform()
+}
